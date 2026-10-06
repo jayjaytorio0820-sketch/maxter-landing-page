@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Maxter Riding Gear — moto jerseys cut for Philippine heat and mountain twisties. Series 01: Marilaque.">
+<meta name="theme-color" content="#0b0a0a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e63323'/><text x='50' y='72' font-size='64' font-family='Arial Black,Impact,sans-serif' font-style='italic' font-weight='900' text-anchor='middle' fill='%230b0a0a'>M</text></svg>">
+<style>html{scroll-behavior:smooth}body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Maxter Riding Gear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800;1,900&family=Archivo:wght@400;500;600;800&family=JetBrains+Mono:wght@500&display=swap">
+</head>
+<body>
+
+<style>
+/* Layout: full-bleed dark hero with jersey on the right, red band, then a drop grid, builder, riders, shops. Single dark world by choice. */
+:root{
+  --ink:#0b0a0a; --ink-2:#151212; --ink-3:#221b1a; --line:#3a2f2d;
+  --paper:#f4efec; --muted:#a59b97; --red:#e63323; --red-deep:#8f1a10;
+  --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --gut:clamp(16px,5vw,72px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{padding-inline:var(--gut);max-width:1440px;margin-inline:auto}
+.lbl{font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.disp{font-family:var(--display);font-style:italic;font-weight:900;text-transform:uppercase;line-height:.86;letter-spacing:-.01em;text-wrap:balance;margin:0}
+.red{color:var(--red)}
+
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ink) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:18px}
+.logo{font-family:var(--display);font-style:italic;font-weight:900;font-size:30px;letter-spacing:-.01em;line-height:1}
+.logo sup{font-size:10px;font-style:normal;font-family:var(--body);margin-left:2px}
+.links{display:flex;gap:clamp(16px,3vw,44px)}
+.links a,.acts a,.acts button{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.links a{color:#cfc6c2}.links a:hover{color:var(--red)}
+.acts{display:flex;gap:24px;align-items:center}
+.acts button{background:none;border:0;cursor:pointer;padding:0;font-weight:800}
+@media (max-width:860px){.links{display:none}.acts a{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:
+   radial-gradient(60% 70% at 78% 55%,rgba(230,51,35,.55),transparent 70%),
+   radial-gradient(35% 45% at 92% 85%,rgba(143,26,16,.7),transparent 70%),
+   radial-gradient(30% 30% at 60% 20%,rgba(230,51,35,.18),transparent 70%),var(--ink)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.5;mix-blend-mode:screen}
+.meta{display:flex;justify-content:space-between;gap:16px;padding-block:28px 22px;border-bottom:1px solid var(--line)}
+.meta span:nth-child(2){text-align:center}
+@media (max-width:640px){.meta span:nth-child(2){display:none}}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:end;gap:24px;padding-block:clamp(40px,8vw,96px) 40px}
+.hero h1{font-size:clamp(64px,11.5vw,184px)}
+.hero h1 .red{display:inline-block}
+.hero p.lede{max-width:34ch;font-size:clamp(17px,1.6vw,22px);margin:28px 0 36px;color:#e6dedb}
+.ctas{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:20px 34px;font-size:13px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;border:2px solid var(--paper);background:transparent;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn.primary{background:var(--red);border-color:var(--red)}
+.btn.primary:hover{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+.btn:not(.primary):hover{background:var(--paper);color:var(--ink)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+.hero-art{position:relative;min-width:0;align-self:center}
+.hero-art .jersey{width:100%;max-width:440px;margin-left:auto;display:block;transform:rotate(-6deg);filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
+.badge{position:absolute;top:-10px;right:-6px;width:150px;height:150px}
+.badge svg{width:100%;height:100%;animation:spin 18s linear infinite}
+.badge .core{position:absolute;inset:50px;background:var(--red);display:grid;place-items:center;font-family:var(--display);font-style:italic;font-weight:900;font-size:30px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.foot{display:flex;justify-content:space-between;align-items:center;padding-block:22px;border-top:1px solid var(--line)}
+.foot .bar{width:36px;height:2px;background:var(--red)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-art{order:-1;max-width:320px;margin-inline:auto}.badge{width:110px;height:110px}.badge .core{inset:36px;font-size:22px}}
+
+/* band */
+.band{background:var(--red);color:var(--ink);overflow:hidden;padding-block:16px;border-block:1px solid var(--red-deep)}
+.track{display:flex;gap:48px;width:max-content;animation:slide 30s linear infinite}
+.track span{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(26px,3.4vw,40px);text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:48px}
+.track span::after{content:"";width:12px;height:12px;background:var(--ink);transform:skewX(-14deg)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section.blk{padding-block:clamp(64px,10vw,120px)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.head h2{font-size:clamp(48px,7vw,104px)}
+.head p{max-width:40ch;color:var(--muted);margin:0}
+
+/* drop grid */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.grid{grid-template-columns:1fr}}
+.card{background:var(--ink-2);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s}
+.card:hover{border-color:var(--red)}
+.card .pic{aspect-ratio:4/5;max-width:100%;display:grid;place-items:center;padding:24px;background:radial-gradient(70% 60% at 50% 45%,var(--ink-3),var(--ink-2));position:relative}
+.card .pic svg{width:86%;transition:transform .35s}
+.card:hover .pic svg{transform:rotate(-4deg) scale(1.04)}
+.tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:11px;background:var(--red);color:var(--ink);padding:4px 8px;font-weight:500}
+.card .info{padding:18px 20px 20px;display:grid;gap:4px;border-top:1px solid var(--line)}
+.card h3{font-family:var(--display);font-style:italic;font-weight:800;font-size:30px;text-transform:uppercase;margin:0;line-height:1}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px}
+.price{font-family:var(--mono);font-size:15px;font-variant-numeric:tabular-nums}
+.add{background:none;border:1px solid var(--paper);padding:9px 14px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.add:hover{background:var(--red);border-color:var(--red)}
+.sub{color:var(--muted);font-size:13px}
+
+/* specs */
+.specs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.spec{padding:32px 24px 8px 0;display:grid;gap:10px;min-width:0}
+.spec + .spec{padding-left:24px;border-left:1px solid var(--line)}
+.spec b{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(44px,5vw,68px);line-height:.9;color:var(--red)}
+.spec h4{margin:0;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.spec p{margin:0;color:var(--muted);font-size:14px}
+@media (max-width:860px){.specs{grid-template-columns:1fr 1fr}.spec:nth-child(3){padding-left:0;border-left:0}.spec{padding-bottom:24px}}
+@media (max-width:460px){.specs{grid-template-columns:1fr}.spec,.spec+.spec{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* builder */
+.builder{background:var(--ink-2);border-block:1px solid var(--line)}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+@media (max-width:860px){.bgrid{grid-template-columns:1fr}}
+.stage{aspect-ratio:1;max-width:100%;display:grid;place-items:center;background:radial-gradient(55% 55% at 50% 50%,rgba(230,51,35,.28),transparent 70%),var(--ink);border:1px solid var(--line);position:relative}
+.stage svg{width:72%}
+.stage .lbl{position:absolute;bottom:16px;left:18px}
+.stage .price{position:absolute;bottom:14px;right:18px}
+form.cfg{display:grid;gap:28px;min-width:0}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:12px}
+legend{padding:0;margin-bottom:12px}
+.sw{display:flex;flex-wrap:wrap;gap:10px}
+.sw label{position:relative;cursor:pointer}
+.sw input{position:absolute;opacity:0;inset:0}
+.sw span{display:block;width:42px;height:42px;border:2px solid var(--line);transform:skewX(-10deg);transition:border-color .15s}
+.sw input:checked + span{border-color:var(--paper);box-shadow:0 0 0 2px var(--red)}
+.sw input:focus-visible + span{outline:2px solid var(--red);outline-offset:3px}
+.two{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
+@media (max-width:520px){.two{grid-template-columns:1fr 1fr}.two .f:first-child{grid-column:1/-1}}
+.f{display:grid;gap:8px;min-width:0}
+.f input,.f select{background:var(--ink);border:1px solid var(--line);padding:14px;font-size:16px;text-transform:uppercase;width:100%;min-width:0}
+.f input:focus,.f select:focus{border-color:var(--red);outline:none}
+
+/* riders */
+.riders{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.riders{grid-template-columns:1fr}}
+.rider{border:1px solid var(--line);padding:28px;display:grid;gap:14px;position:relative;overflow:hidden;background:linear-gradient(160deg,var(--ink-2),var(--ink))}
+.rider .no{position:absolute;right:-6px;top:-22px;font-family:var(--display);font-style:italic;font-weight:900;font-size:150px;line-height:1;color:var(--ink-3);z-index:0}
+.rider > *{position:relative}
+.rider h3{font-family:var(--display);font-style:italic;font-weight:900;font-size:40px;text-transform:uppercase;margin:0;line-height:.95}
+.rider dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:14px}
+.rider dt{color:var(--muted)}
+.rider dd{margin:0;font-family:var(--mono);font-size:13px}
+
+/* locations */
+.locs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.loc{padding:28px 24px 28px 0;display:grid;gap:8px;min-width:0}
+.loc + .loc{padding-left:24px;border-left:1px solid var(--line)}
+.loc h3{font-family:var(--display);font-style:italic;font-weight:900;font-size:44px;text-transform:uppercase;margin:0;line-height:.9}
+.loc p{margin:0;color:var(--muted);font-size:14px}
+.loc .hrs{font-family:var(--mono);font-size:13px;color:var(--paper)}
+@media (max-width:860px){.locs{grid-template-columns:1fr}.loc,.loc+.loc{padding-left:0;border-left:0;border-bottom:1px solid var(--line)}}
+
+footer.site{border-top:1px solid var(--line);padding-block:48px}
+footer .big{font-size:clamp(72px,17vw,260px);color:var(--ink-3);line-height:.8}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:28px}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);background:var(--paper);color:var(--ink);padding:14px 22px;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transition:transform .3s;z-index:50;max-width:calc(100vw - 32px)}
+.toast.on{transform:translate(-50%,0)}
+
+/* load sequence */
+.rise{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}
+@keyframes rise{from{transform:translateY(24px)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">MAXTER<sup>™</sup></a>
+    <nav class="links" aria-label="Main">
+      <a href="#drop">Shop</a><a href="#build">Custom Jerseys</a><a href="#riders">Riders</a><a href="#shops">Locations</a>
+    </nav>
+    <div class="acts">
+      <a href="#drop">Search</a>
+      <button type="button" id="cartBtn">Cart (<span id="cartN">0</span>)</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <canvas id="smoke" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="meta lbl"><span>Maxter</span><span>Marikina · Philippines</span><span>Riding gear — Est. 2026</span></div>
+      <div class="hero-grid">
+        <div>
+          <h1 class="disp rise">Unleash<br>your <span class="red">style.</span></h1>
+          <p class="lede rise d2">Moto jerseys cut for 34°C traffic and mountain twisties. Breathable mesh, UPF 50+ fabric, and prints that won't crack after a season on the road.</p>
+          <div class="ctas rise d3">
+            <a class="btn primary" href="#drop">Shop the drop <span class="arr">→</span></a>
+            <a class="btn" href="#build">Build a custom jersey</a>
+          </div>
+        </div>
+        <div class="hero-art rise d1">
+          <div id="heroJersey"></div>
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 150 150"><defs><path id="circ" d="M75,75 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"/></defs>
+              <text font-family="Archivo,sans-serif" font-size="12.5" font-weight="800" letter-spacing="4.4" fill="#f4efec"><textPath href="#circ">NEW DROP — SERIES 01 — MARILAQUE —</textPath></text></svg>
+            <div class="core">M</div>
+          </div>
+        </div>
+      </div>
+      <div class="foot lbl"><span>Series 01 — Marilaque</span><span class="bar"></span><span>Scroll</span></div>
+    </div>
+  </section>
+
+  <div class="band" aria-hidden="true"><div class="track" id="track"></div></div>
+
+  <section class="blk" id="drop">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="disp">The <span class="red">drop.</span></h2>
+        <p>Series 01 is named after the roads we ride every weekend. Each run is limited to 150 pieces per colorway.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="wrap">
+      <div class="specs">
+        <div class="spec"><b>140</b><h4>GSM mesh</h4><p>Moisture-wicking polyester that dries in about 20 minutes at a stoplight.</p></div>
+        <div class="spec"><b>50+</b><h4>UPF rating</h4><p>Blocks 98% of UV on noon rides to Tagaytay and Baguio.</p></div>
+        <div class="spec"><b>12</b><h4>Laser-cut vents</h4><p>Placed at the underarm and back yoke, where heat builds when you tuck in.</p></div>
+        <div class="spec"><b>XS–3XL</b><h4>Athletic fit</h4><p>Longer back panel and pre-curved sleeves for a riding position.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk builder" id="build">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="disp">Build <span class="red">yours.</span></h2>
+        <p>Pick your colors, add your name and race number. Made to order in Marikina and shipped in 10–14 days.</p>
+      </div>
+      <div class="bgrid">
+        <div class="stage">
+          <div id="preview"></div>
+          <span class="lbl">Live preview</span>
+          <span class="price">₱1,850</span>
+        </div>
+        <form class="cfg" id="cfg">
+          <fieldset><legend class="lbl">Base color</legend><div class="sw" id="swBase"></div></fieldset>
+          <fieldset><legend class="lbl">Accent color</legend><div class="sw" id="swAcc"></div></fieldset>
+          <div class="two">
+            <div class="f"><label class="lbl" for="cName">Name on back</label><input id="cName" maxlength="10" value="JAY JAY" autocomplete="off"></div>
+            <div class="f"><label class="lbl" for="cNum">Number</label><input id="cNum" inputmode="numeric" maxlength="2" value="27" autocomplete="off"></div>
+            <div class="f"><label class="lbl" for="cSize">Size</label><select id="cSize"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option></select></div>
+          </div>
+          <div class="ctas"><button class="btn primary" type="submit">Add to cart <span class="arr">→</span></button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="riders">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="disp">The <span class="red">riders.</span></h2>
+        <p>The crew that tests every pattern before it ships. Sample profiles for this concept.</p>
+      </div>
+      <div class="riders">
+        <article class="rider"><span class="no">07</span><span class="lbl">Track day</span><h3>Migs<br>Dela Cruz</h3><dl><dt>Machine</dt><dd>Yamaha R15 V4</dd><dt>Home road</dt><dd>Marilaque</dd><dt>Wears</dt><dd>Marilaque · Red</dd></dl></article>
+        <article class="rider"><span class="no">21</span><span class="lbl">Adventure</span><h3>Kaye<br>Soriano</h3><dl><dt>Machine</dt><dd>Honda CRF300L</dd><dt>Home road</dt><dd>Kennon Road</dd><dt>Wears</dt><dd>Kennon · Bone</dd></dl></article>
+        <article class="rider"><span class="no">88</span><span class="lbl">Street</span><h3>Paolo<br>Ramos</h3><dl><dt>Machine</dt><dd>Kawasaki Z400</dd><dt>Home road</dt><dd>Sierra Madre Loop</dd><dt>Wears</dt><dd>Sierra · Carbon</dd></dl></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="shops" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2 class="disp">Find <span class="red">us.</span></h2><p>Try on sizes and pick up custom orders at any of our shops.</p></div>
+      <div class="locs">
+        <div class="loc"><span class="lbl">Flagship</span><h3>Marikina</h3><p>J.P. Rizal St., Concepcion Uno</p><span class="hrs">Tue–Sun · 10:00–20:00</span></div>
+        <div class="loc"><span class="lbl">Showroom</span><h3>Cubao</h3><p>Aurora Blvd., Quezon City</p><span class="hrs">Daily · 11:00–21:00</span></div>
+        <div class="loc"><span class="lbl">Pop-up</span><h3>Tanay</h3><p>Marilaque Hwy rest stop, weekends only</p><span class="hrs">Sat–Sun · 06:00–14:00</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p class="disp big">Maxter</p>
+    <div class="row lbl"><span>© 2026 Maxter Riding Gear</span><span>Ride safe. Gear up.</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const RED="#e63323",INK="#0b0a0a",PAPER="#f4efec";
+let uid=0;
+function jersey({base,acc,trim=INK,num="",name="",back=false}){
+  const id="cl"+(uid++);
+  const body="M68 18 Q100 36 132 18 L168 30 Q186 70 199 122 L174 132 L152 78 L154 214 Q100 222 46 214 L48 78 L26 132 L1 122 Q14 70 32 30 Z";
+  const nm=String(name).toUpperCase().slice(0,10).replace(/[<&>]/g,"");
+  const n=String(num).replace(/\D/g,"").slice(0,2);
+  return `<svg viewBox="0 0 200 224" class="jersey" role="img" aria-label="Jersey ${nm} ${n}">
+  <defs><clipPath id="${id}"><path d="${body}"/></clipPath></defs>
+  <path d="${body}" fill="${base}"/>
+  <g clip-path="url(#${id})">
+    <polygon points="0,150 200,40 200,72 0,182" fill="${acc}"/>
+    <polygon points="0,196 200,86 200,96 0,206" fill="${trim}" opacity=".85"/>
+    <rect x="0" y="104" width="44" height="12" fill="${acc}" transform="rotate(62 22 110)"/>
+    <rect x="156" y="104" width="44" height="12" fill="${acc}" transform="rotate(-62 178 110)"/>
+    <rect x="0" y="200" width="200" height="24" fill="${trim}"/>
+  </g>
+  <path d="M68 18 Q100 36 132 18 Q118 44 100 46 Q82 44 68 18Z" fill="${trim}"/>
+  ${back?`<text x="100" y="74" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="15" letter-spacing="2" fill="${PAPER}" stroke="${INK}" stroke-width=".6" paint-order="stroke">${nm}</text>`:""}
+  ${n?`<text x="100" y="${back?150:128}" text-anchor="middle" font-family="'Barlow Condensed',Impact,sans-serif" font-style="italic" font-weight="900" font-size="${back?78:46}" fill="${PAPER}" stroke="${INK}" stroke-width="2" paint-order="stroke">${n}</text>`:""}
+  <path d="${body}" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="1.5"/>
+</svg>`;
+}
+
+document.getElementById("heroJersey").innerHTML=jersey({base:"#1d1a19",acc:RED,trim:PAPER,num:"01"});
+
+const items="UPF 50+ fabric · Laser-cut vents · Sublimated prints · Made in Marikina · Limited to 150 pieces".split(" · ");
+document.getElementById("track").innerHTML=[...items,...items].map(t=>`<span>${t}</span>`).join("");
+
+const products=[
+  {n:"Marilaque",c:"Red / Carbon",p:1650,base:RED,acc:INK,trim:PAPER,num:"01",tag:"New"},
+  {n:"Kennon",c:"Bone / Red",p:1650,base:"#e9e1d8",acc:RED,trim:INK,num:"02"},
+  {n:"Sierra",c:"Carbon / Ember",p:1750,base:"#1d1a19",acc:"#ff6a2b",trim:"#5a4e4b",num:"03",tag:"Low stock"},
+  {n:"Bugsuk",c:"Sea / Sand",p:1650,base:"#0f5c6b",acc:"#f0c66b",trim:INK,num:"04"}
+];
+const peso=v=>"₱"+v.toLocaleString("en-PH");
+document.getElementById("grid").innerHTML=products.map((p,i)=>`
+ <article class="card">
+  <div class="pic">${p.tag?`<span class="tag">${p.tag}</span>`:""}${jersey(p)}</div>
+  <div class="info"><span class="lbl">Series 01 · ${p.num}</span><h3>${p.n}</h3><span class="sub">${p.c}</span>
+   <div class="row"><span class="price">${peso(p.p)}</span><button class="add" type="button" data-i="${i}">Add</button></div></div>
+ </article>`).join("");
+
+let cart=0;const cartN=document.getElementById("cartN"),toast=document.getElementById("toast");let tt;
+function addCart(msg){cart++;cartN.textContent=cart;toast.textContent=msg;toast.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove("on"),2200)}
+document.getElementById("grid").addEventListener("click",e=>{const b=e.target.closest(".add");if(b){const p=products[b.dataset.i];addCart(`${p.n} added to cart`)}});
+document.getElementById("cartBtn").addEventListener("click",()=>{toast.textContent=cart?`${cart} item${cart>1?"s":""} in your cart`:"Your cart is empty";toast.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove("on"),2200)});
+
+// builder
+const bases=[["Red",RED],["Carbon",INK],["Bone","#e9e1d8"],["Sea","#0f5c6b"],["Olive","#4d5a2c"],["Royal","#1f3fa8"]];
+const accs=[["Carbon",INK],["Red",RED],["Bone","#f4efec"],["Ember","#ff6a2b"],["Sand","#f0c66b"],["Lime","#b6e02f"]];
+function swatches(el,list,name,def){el.innerHTML=list.map(([l,c],i)=>`<label title="${l}"><input type="radio" name="${name}" id="${name}${i}" value="${c}" ${i===def?"checked":""} aria-label="${l}"><span style="background:${c}"></span></label>`).join("")}
+swatches(document.getElementById("swBase"),bases,"base",0);
+swatches(document.getElementById("swAcc"),accs,"acc",0);
+const cfg=document.getElementById("cfg"),prev=document.getElementById("preview");
+function draw(){
+  const base=cfg.base.value,acc=cfg.acc.value;
+  const trim=(base===INK&&acc===INK)?RED:(acc===INK?PAPER:INK);
+  prev.innerHTML=jersey({base,acc,trim,num:cfg.cNum.value,name:cfg.cName.value,back:true});
+}
+cfg.cNum.addEventListener("input",()=>{cfg.cNum.value=cfg.cNum.value.replace(/\D/g,"")});
+cfg.addEventListener("input",draw);
+cfg.addEventListener("submit",e=>{e.preventDefault();const nm=cfg.cName.value.trim().toUpperCase()||"NO NAME";addCart(`Custom ${nm} #${cfg.cNum.value||"00"} · ${cfg.cSize.value} added`)});
+draw();
+
+// smoke
+(function(){
+  const c=document.getElementById("smoke"),x=c.getContext("2d");
+  const still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let w,h,ps=[];
+  function size(){const r=c.getBoundingClientRect();w=c.width=r.width;h=c.height=r.height}
+  size();addEventListener("resize",size);
+  for(let i=0;i<26;i++)ps.push({x:.45+Math.random()*.6,y:.3+Math.random()*.8,r:80+Math.random()*180,vx:(Math.random()-.5)*.0006,vy:-.0003-Math.random()*.0005,a:.05+Math.random()*.08});
+  function frame(){
+    x.clearRect(0,0,w,h);
+    for(const p of ps){
+      if(!still){p.x+=p.vx;p.y+=p.vy;if(p.y<-.2){p.y=1.2;p.x=.45+Math.random()*.6}}
+      const g=x.createRadialGradient(p.x*w,p.y*h,0,p.x*w,p.y*h,p.r);
+      g.addColorStop(0,`rgba(230,70,50,${p.a})`);g.addColorStop(1,"rgba(230,70,50,0)");
+      x.fillStyle=g;x.beginPath();x.arc(p.x*w,p.y*h,p.r,0,7);x.fill();
+    }
+    if(!still)requestAnimationFrame(frame);
+  }
+  frame();
+})();
+</script>
+
+</body></html>
